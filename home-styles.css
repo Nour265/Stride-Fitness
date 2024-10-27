@@ -1,5 +1,5 @@
 body{
-    background-color:#f76003;
+    background-color:white;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,6 +11,7 @@ header{
     background-image: url(imgs/wp5901457.webp);
     background-size: cover;
     height: 500px;
+    
     
 }
 
@@ -56,15 +57,135 @@ header img{
     top: 220px;
 }
 
-#card_container{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+main{
+    
 }
 
-.card{
-    border-style: solid;
-    border: black;
-    width: 1000px;
-    height: 50px;
+#banner{
+    overflow: hidden;
+    width: 100%;
+    background-color: #f76003;
+}
+
+#scrollingText{
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0px;
+    font-family:monospace;
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%); 
+    }
+    to {
+        transform: translateX(-100%); 
+}
+}
+
+#card_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: 150px;
+}
+
+.card img{
+    width: 450px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-radius: 30px;
 }  
+
+.card{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 40px;
+
+    
+}
+
+
+
+
+
+
+.text_container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    
+}
+
+.text_container h1{
+    
+}
+
+.text_container p{
+    width: 50%;
+   
+}
+
+.text_container a button{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f76003;
+    border: none;
+
+}
+
+.text_container a button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: #f76003;
+    transition-duration: 0.4s;
+}
+
+@media (max-width: 768px) {
+    #card_container {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-wrap: wrap;
+        flex-direction: column; 
+    }
+
+    .text_container p {
+        width: 100%; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+    #card_container {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: column; 
+        gap: 20px;
+        align-items: center;
+    }
+
+    
+
+    .text_container p {
+        width: 100%;
+    }
+}
+
+#card_container :nth-child(2n) .text_container {
+    
+}
