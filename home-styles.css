@@ -1,8 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color:white;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -27,18 +30,22 @@ header img{
     left: 50%;
     transform: translateX(-50%);
     top: 10px;
+    flex-wrap: wrap;
     
 }
 
 .nav a{
     text-decoration: none;
     color: white;
-
+    padding: 10px;
+    
 }
 
 .nav a:hover{
-    color: #f76003;
+    color: black;
     transition-duration: 0.4s;
+    background-color: #c64c00;
+    border-radius: 20px;
 }
 
 #hname{
@@ -77,18 +84,13 @@ main{
     font-weight: bold;
     padding: 20px;
     text-align: center;
-    animation: scrollText 10s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
-@keyframes scrollText {
-    from {
-        transform: translateX(100%); 
-    }
-    to {
-        transform: translateX(-100%); 
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
-}
-
 #card_container{
     display: flex;
     flex-direction: column;
@@ -151,6 +153,8 @@ main{
     background-color: black;
     color: #f76003;
     transition-duration: 0.4s;
+    font-weight: bolder;
+    font-size: larger;
 }
 
 @media (max-width: 768px) {
@@ -165,6 +169,15 @@ main{
 
     .text_container p {
         width: 100%; 
+    }
+
+    #social-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .icon-content a {
+        width: 40px;
+        height: 40px;
     }
 }
 

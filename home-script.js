@@ -1,1 +1,0 @@
-document.getElementById("scrollingText").style.animationDuration = "5s";
