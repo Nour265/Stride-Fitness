@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+    <title>Stride</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="signUpForm">
+                <h1>Create Account</h1>
+                <input type="text" id="signUpName" placeholder="Name">
+                <span class="error-message" id="signUpNameError">Please enter your name.</span>
+                <input type="email" id="signUpEmail" placeholder="Email">
+                <span class="error-message" id="signUpEmailError">Please enter a valid email.</span>
+                <input type="password" id="signUpPassword" placeholder="Password">
+                <span class="error-message" id="signUpPasswordError">Please enter a password.</span>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="signInForm">
+                <h1>Sign In</h1>
+                <input type="email" id="signInEmail" placeholder="Email">
+                <span class="error-message" id="signInEmailError">Please enter a valid email.</span>
+                <input type="password" id="signInPassword" placeholder="Password">
+                <span class="error-message" id="signInPasswordError">Please enter your password.</span>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <img src="imgs/logo black background.png" alt="hi">
+                    <h1>Hello there!</h1>
+                    <p>Please register your details to continue.</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <img src="imgs/logo black background.png" alt="hi">
+                    <h1>Welcome Back!</h1>
+                    <p>Please enter your details to continue.</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login-script.js"></script>
+    
+</body>
+</html>
