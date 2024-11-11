@@ -53,7 +53,7 @@ signInForm.addEventListener("submit", (e) => {
         let userExists = users.some(user => user.email === emailInput.value && user.password === passwordInput.value);
 
         if (userExists) {
-            alert("Sign In Successful!");
+            window.location.href = "home.html";
         } else {
             emailInput.classList.add("error");
             passwordInput.classList.add("error");
@@ -104,10 +104,10 @@ signUpForm.addEventListener("submit", (e) => {
             emailError.style.display = "block";
         } else {
             users.push({ username: nameInput.value, email: emailInput.value, password: passwordInput.value });
-            alert("Account created successfully! Please sign in.");
             signUpForm.reset();
             container.classList.remove("active");
             saveUsersToLocalStorage();
+            window.location.href = "home.html";
         }
     }
 
