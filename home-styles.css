@@ -43,9 +43,10 @@ header img{
 
 .nav a:hover{
     color:#f76003;
-    transition-duration: 0.4s;
-    
+    transition-duration: 0.1s;
+    font-weight: bolder;
 }
+
 
 #hname{
     color: #f76003;
