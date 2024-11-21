@@ -26,7 +26,7 @@ header{
     display: flex;
     gap: 20px;
     position: absolute;
-    left: 30%;
+    left: 50%;
     transform: translateX(-50%);
     top: 10px;
     flex-wrap: wrap;
@@ -83,10 +83,6 @@ footer{
     background-color:#f76003;
     width: 200px;
     height: 2px;
-}
-
-#copyright{
-
 }
 ul{
     list-style: none;
@@ -183,6 +179,7 @@ footer img{
 }
 .about-content{
     width: 400px;
+    font-size: large;
 }
 #review{
     padding: 100px;

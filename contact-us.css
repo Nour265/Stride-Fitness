@@ -127,6 +127,9 @@ tr td{
     cursor: pointer; 
   }
   footer{
+    position: relative;
+    width: 100%;
+    top: 8.3vh;
     background-color: black ;
     color: white;
     height: auto;
@@ -231,4 +234,7 @@ ul{
 
 footer img{
     width: 200px;
+}
+footer{
+    font-family: sans-serif;
 }

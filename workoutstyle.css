@@ -7,7 +7,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-color: #f76003;
+    background-color: #ff873d;
     gap: 20px;
     height: 100vh;
     padding: 20px;
@@ -57,7 +57,7 @@ main section{
     
     color: black;
     width:300px;
-    background-color: #f76003;
+    background-color: #ff873d;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -75,6 +75,7 @@ main #header{
     box-shadow: 0 0 0;
     color: white;
     width: 75%;
+    padding-left: 50px;
 }
 #header h1{
     font-size: 75px;
@@ -82,12 +83,14 @@ main #header{
 }
 #header p{
     font-size: larger;
-    width: auto;
+    width: 100%;
 }
 main #boxes{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap:20px;
+    padding-right: 80px;
 }
 main section button{
     cursor: pointer;
@@ -523,4 +526,10 @@ footer img{
     100% {
         transform: scale(1);
     }
+}
+@media only screen and (max-width: 800px) {
+    #header{
+        width: 700px;
+    }
+
 }
