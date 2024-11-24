@@ -1,3 +1,4 @@
+let Logged_In = false;
 let container = document.getElementById("container");
 let signInButton = document.getElementById("login");
 let registerButton = document.getElementById("register");
@@ -53,6 +54,8 @@ signInForm.addEventListener("submit", (e) => {
         let userExists = users.some(user => user.email === emailInput.value && user.password === passwordInput.value);
 
         if (userExists) {
+            Logged_In = true;
+            localStorage.setItem("Logged_In", true);
             window.location.href = "home.html";
         } else {
             emailInput.classList.add("error");
@@ -104,6 +107,8 @@ signUpForm.addEventListener("submit", (e) => {
             emailError.style.display = "block";
         } else {
             users.push({ username: nameInput.value, email: emailInput.value, password: passwordInput.value });
+            Logged_In = true;
+            localStorage.setItem("Logged_In", true);
             signUpForm.reset();
             container.classList.remove("active");
             saveUsersToLocalStorage();
