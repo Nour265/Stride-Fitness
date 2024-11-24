@@ -119,7 +119,7 @@ signUpForm.addEventListener("submit", (e) => {
     console.log(users);
 });
 console.log(users);
-
+console.log(Logged_In);
 function clearAllUsers(){
     localStorage.removeItem("users");
     console.log(users);

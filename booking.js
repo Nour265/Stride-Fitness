@@ -4,7 +4,6 @@ $(document).ready(function () {
     const $bookingMessage = $('#bookingMessage'); 
     const $confirmBookingBtn = $('#confirmBookingBtn');
     let bookings = {};
-
     function openModal() {
         $modal.addClass('show');
     }
@@ -28,6 +27,11 @@ $(document).ready(function () {
     }
 
     $('.book__btn').on('click', function () {
+        const loggedIn = localStorage.getItem('loggedIn') === 'true';
+        if (!loggedIn) {
+            alert("You must log in to access this page.");
+            return;
+        }
         const trainerName = $(this).closest('.card').find('.card__title').text();
         $modal.data('trainerName', trainerName);
         $modal.find('.datepicker').val('');
