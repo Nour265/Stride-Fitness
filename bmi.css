@@ -283,15 +283,11 @@ button:hover {
     }
   }
 
-/* Nav Bar */
 header{
     display: flex;
     background-image: url(imgs/bmi.jpg);
     background-size: cover;
     height: 500px;
-    
-    
-    
 }
 
 header img{
@@ -314,8 +310,6 @@ header img{
     text-decoration: none;
     color: white;
     padding: 10px;
-    font-size: 25px;
-    
 }
 
 .nav a:hover{
@@ -341,7 +335,6 @@ header img{
     top: 220px;
 }
 
-/* Footer */
 footer {
     background-color: black;
     color: white;
@@ -350,7 +343,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%; /* Ensure the footer spans the full width */
+    width: 100%;
     padding: 10px 0;
 }
 
