@@ -27,7 +27,7 @@ header img{
     display: flex;
     gap: 20px;
     position: absolute;
-    left: 30%;
+    left: 50%;
     transform: translateX(-50%);
     top: 10px;
     flex-wrap: wrap;
@@ -43,8 +43,8 @@ header img{
 
 .nav a:hover{
     color:#f76003;
-    transition-duration: 0.1s;
-    font-weight: bolder;
+    transition-duration: 0.3s;
+    
 }
 
 
