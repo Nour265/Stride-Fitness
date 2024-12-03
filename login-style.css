@@ -15,6 +15,31 @@ body{
   height: 100vh;
 }
 
+.homeButton {
+  background-color: black;
+  border-color: #f76003;
+  color: #f76003;
+  font-size: 16px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.homeButton:hover{
+  background-color: transparent;
+  border-color: black;
+  color: black;
+  transition-duration: 0.3s;
+}
+
+
+
 .container{
   background-color: #fff;
   border-radius: 35px;
@@ -57,6 +82,12 @@ body{
   background-color: transparent;
   border-color: #f76003;
   color: #f76003;
+}
+.container button.hidden:hover{
+  background-color: #f76003;
+  border-color: black;
+  color: black;
+  transition-duration: 0.3s;
 }
 .container form {
   background-color: #fff;
@@ -163,7 +194,7 @@ body{
 .toggle-left {
   transform: translateX(-200%);
 }
-  .container.active .toggle-left {
+.container.active .toggle-left {
   transform: translateX(0);
   }
 .toggle-right {
@@ -182,4 +213,11 @@ input.error {
   color: red;
   font-size: 12px;
   display: none;
+}
+
+.logging-buttons:hover{
+  background-color: white;
+  border-color: #f76003;
+  color: #f76003;
+  transition-duration: 0.3s;
 }

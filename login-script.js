@@ -2,12 +2,17 @@ let Logged_In = sessionStorage.getItem("Logged_In") === "true";
 let container = document.getElementById("container");
 let signInButton = document.getElementById("login");
 let registerButton = document.getElementById("register");
+let backHomeButton = document.getElementById("homeButton");
 signInButton.addEventListener("click", () => {
     container.classList.remove("active");
 });
 
 registerButton.addEventListener("click", () => {
     container.classList.add("active");
+});
+
+backHomeButton.addEventListener("click", () => {
+    window.location.href = "home.html";
 });
 
 let storedUsers = JSON.parse(localStorage.getItem("users"));
