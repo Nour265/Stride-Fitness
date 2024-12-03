@@ -42,8 +42,8 @@ body{
 
 .nav a:hover{
     color: #f76003;
-    transition-duration: 0.1s;
-    font-weight: bolder;
+    transition-duration: 0.3s;
+    
 }
 
 

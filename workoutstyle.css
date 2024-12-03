@@ -412,7 +412,9 @@ footer{
 }
 
 #list-container{
+    margin: 20px;
     display: flex;
+    gap: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -433,7 +435,7 @@ ul{
 }
 
 #social-list{
-    padding-right: 40px ;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -445,6 +447,7 @@ ul{
     position: relative;
     margin: 0 10px;
     padding: 0.5rem;
+    
 }
 
 .icon-content a{
@@ -459,10 +462,11 @@ ul{
     color: #4D4D4D;
     background-color: white;
     transition: all 0.3s ease-in-out;
+    
 }
 
 .icon-content a:hover{
-    box-shadow: 3px 2px 45px 0px black;
+    
     color: white;
 }
 
