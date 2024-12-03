@@ -58,12 +58,6 @@ body {
             var(--c3) 72deg 108deg,
             var(--c4) 108deg 144deg,
             var(--c5) 144deg 180deg,
-            #0000 180deg
-            var(--c1) 0deg 36deg,
-            var(--c2) 36deg 72deg,
-            var(--c3) 72deg 108deg,
-            var(--c4) 108deg 144deg,
-            var(--c5) 144deg 180deg,
           #0000 180deg
         );
     position: relative;
