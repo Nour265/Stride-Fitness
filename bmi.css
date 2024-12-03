@@ -53,12 +53,12 @@ body {
         radial-gradient(#ffff 0 0) content-box,
         conic-gradient(
             from -90deg,
-            var(--c1) 0 36deg,
-            var(--c2) 0 72deg,
-            var(--c3) 0 108deg,
-            var(--c4) 0 144deg,
-            var(--c5) 0 180deg,
-            #0000 0
+            var(--c1) 0deg 36deg,
+            var(--c2) 36deg 72deg,
+            var(--c3) 72deg 108deg,
+            var(--c4) 108deg 144deg,
+            var(--c5) 144deg 180deg,
+            #0000 180deg
         );
     position: relative;
     display: flex;
