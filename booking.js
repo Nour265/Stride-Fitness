@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    const $modal = $('#sketchModal');
-    const $modalContent = $modal.find('.modal-content');
-    const $bookingMessage = $('#bookingMessage'); 
-    const $confirmBookingBtn = $('#confirmBookingBtn');
+    let $modal = $('#sketchModal');
+    let $modalContent = $modal.find('.modal-content');
+    let $bookingMessage = $('#bookingMessage'); 
+    let $confirmBookingBtn = $('#confirmBookingBtn');
     let bookings = {};
     function openModal() {
         $modal.addClass('show');
@@ -33,7 +33,7 @@ $(document).ready(function () {
             alert("You must log in to access this page.");
             return;
         }
-        const trainerName = $(this).closest('.card').find('.card__title').text();
+        let trainerName = $(this).closest('.card').find('.card__title').text();
         $modal.data('trainerName', trainerName);
         $modal.find('.datepicker').val('');
         $('#timePicker').val('');
@@ -43,9 +43,9 @@ $(document).ready(function () {
     });
 
     $confirmBookingBtn.on('click', function () {
-        const trainerName = $modal.data('trainerName');
-        const date = $('.datepicker').val();
-        const time = $('#timePicker').val();
+        let trainerName = $modal.data('trainerName');
+        let date = $('.datepicker').val();
+        let time = $('#timePicker').val();
 
         if (!date || !time) {
             alert('Please select both a date and time.');
