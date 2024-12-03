@@ -53,12 +53,12 @@ body {
         radial-gradient(#ffff 0 0) content-box,
         conic-gradient(
             from -90deg,
-            var(--c1) 0 36deg,
-            var(--c2) 0 72deg,
-            var(--c3) 0 108deg,
-            var(--c4) 0 144deg,
-            var(--c5) 0 180deg,
-            #0000 0
+            var(--c1) 0deg 36deg,
+            var(--c2) 36deg 72deg,
+            var(--c3) 72deg 108deg,
+            var(--c4) 108deg 144deg,
+            var(--c5) 144deg 180deg,
+          #0000 180deg
         );
     position: relative;
     display: flex;
@@ -67,14 +67,14 @@ body {
 }
 .needle {
     position: absolute;
-    width: 5px; /* Width of the line */
-    height: 130px; /* Length of the line */
-    background-color: black; /* Color of the needle */
+    width: 5px;
+    height: 130px;
+    background-color: black;
     top: 50%;
     left: 50%;
-    transform-origin: bottom center; /* Set the rotation point at the bottom of the line */
-    transform: translateY(-100%) rotate(-90deg); /* Adjust the needle's position vertically and apply rotation */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for rotation */
+    transform-origin: bottom center;
+    transform: translateY(-100%) rotate(-90deg);
+    transition: transform 0.3s ease-in-out;
 }
 
 .panel.right-panel {
@@ -93,7 +93,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 300px; /* Fixed width for the input section */
+  width: 300px;
   gap: 10px;
 }
 
@@ -126,7 +126,6 @@ button:hover {
     color: #f76003;
 }
 
-/* BMI Result Text */
 #bmiResult {
     font-size: 1.2rem;
     margin-top: 20px;
@@ -134,8 +133,6 @@ button:hover {
     text-align: center;
 }
 
-/* Container 2 */
-/* Container for the two panels - renamed to container2 */
 .container2 {
     display: flex;
     justify-content: center;
@@ -146,10 +143,9 @@ button:hover {
     background-color: white;
     border-radius: 15px;
     padding: 20px;
-    gap: 40px; /* Space between the left and right panels */
+    gap: 40px;
 }
 
-/* Left Panel Styling */
 .panel2.left-panel2 {
     flex: 1;
     display: flex;
@@ -185,7 +181,6 @@ button:hover {
     outline: none;
 }
 
-/* Right Panel Styling */
 .panel2.right-panel2 {
     flex: 1;
     display: flex;
@@ -226,21 +221,21 @@ button:hover {
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Change to column layout */
-        gap: 20px; /* Adjust the gap between the panels in column layout */
+        flex-direction: column;
+        gap: 20px;
     }
 
     .container2 {
-        flex-direction: column; /* Change to column layout */
-        gap: 20px; /* Adjust the gap between the panels in column layout */
+        flex-direction: column;
+        gap: 20px;
     }
 
     .panel.right-panel, .panel2.right-panel2 {
-        width: 100%; /* Ensure the right panels take full width in column layout */
+        width: 100%;
     }
 
     .panel.left-panel, .panel2.left-panel2 {
-        width: 100%; /* Ensure the left panels take full width in column layout */
+        width: 100%;
     }
 
     .panel.left-panel{
@@ -269,7 +264,7 @@ button:hover {
 
     }
     #bmiResult {
-        display: cover; /* Ensure it is displayed */
+        display: cover;
         font-size: 1.2rem;
         margin-top: 20px;
         color: #333;
