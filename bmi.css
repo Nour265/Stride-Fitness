@@ -58,6 +58,12 @@ body {
             var(--c3) 72deg 108deg,
             var(--c4) 108deg 144deg,
             var(--c5) 144deg 180deg,
+            #0000 180deg
+            var(--c1) 0deg 36deg,
+            var(--c2) 36deg 72deg,
+            var(--c3) 72deg 108deg,
+            var(--c4) 108deg 144deg,
+            var(--c5) 144deg 180deg,
           #0000 180deg
         );
     position: relative;
@@ -70,8 +76,14 @@ body {
     width: 5px;
     height: 130px;
     background-color: black;
+    width: 5px;
+    height: 130px;
+    background-color: black;
     top: 50%;
     left: 50%;
+    transform-origin: bottom center;
+    transform: translateY(-100%) rotate(-90deg);
+    transition: transform 0.3s ease-in-out;
     transform-origin: bottom center;
     transform: translateY(-100%) rotate(-90deg);
     transition: transform 0.3s ease-in-out;
@@ -93,6 +105,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 300px;
   width: 300px;
   gap: 10px;
 }
@@ -126,6 +139,7 @@ button:hover {
     color: #f76003;
 }
 
+
 #bmiResult {
     font-size: 1.2rem;
     margin-top: 20px;
@@ -144,7 +158,9 @@ button:hover {
     border-radius: 15px;
     padding: 20px;
     gap: 40px;
+    gap: 40px;
 }
+
 
 .panel2.left-panel2 {
     flex: 1;
@@ -180,6 +196,7 @@ button:hover {
 .panel2.left-panel2 input:focus {
     outline: none;
 }
+
 
 .panel2.right-panel2 {
     flex: 1;
@@ -223,18 +240,24 @@ button:hover {
     .container {
         flex-direction: column;
         gap: 20px;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .container2 {
+        flex-direction: column;
+        gap: 20px;
         flex-direction: column;
         gap: 20px;
     }
 
     .panel.right-panel, .panel2.right-panel2 {
         width: 100%;
+        width: 100%;
     }
 
     .panel.left-panel, .panel2.left-panel2 {
+        width: 100%;
         width: 100%;
     }
 
@@ -264,6 +287,7 @@ button:hover {
 
     }
     #bmiResult {
+        display: cover;
         display: cover;
         font-size: 1.2rem;
         margin-top: 20px;

@@ -1,17 +1,20 @@
 document.getElementById('calculate-BMI').addEventListener('click', function() {
     
+    
     let weight = parseFloat(document.getElementById('weight').value);
     let height = parseFloat(document.getElementById('height').value) / 100;
-
+    
     if (isNaN(weight) || isNaN(height) || height === 0) {
         alert("Please enter valid weight and height.");
         return;
     }
 
+    
     let bmi = weight / (height * height);
     let bmiResult = document.getElementById('bmiResult');
     bmiResult.textContent = `Your BMI: ${bmi.toFixed(2)}`;
 
+    
     let level = "";
     let color = "";
     let angle = 0;
@@ -20,20 +23,31 @@ document.getElementById('calculate-BMI').addEventListener('click', function() {
         level = "Severely Underweight";
         color = "var(--c1)";
         angle = -90 + (bmi / 16) * 36;
+        color = "var(--c1)";
+        angle = -90 + (bmi / 16) * 36;
     } else if (bmi >= 16 && bmi < 18.5) {
         level = "Underweight";
+        color = "var(--c2)";
+        angle = -54 + ((bmi - 16) / 2.5) * 36;
         color = "var(--c2)";
         angle = -54 + ((bmi - 16) / 2.5) * 36;
     } else if (bmi >= 18.5 && bmi < 25) {
         level = "Normal Weight";
         color = "var(--c3)";
         angle = -18 + ((bmi - 18.5) / 6.5) * 36;
+        color = "var(--c3)";
+        angle = -18 + ((bmi - 18.5) / 6.5) * 36;
     } else if (bmi >= 25 && bmi < 30) {
         level = "Overweight";
         color = "var(--c4)";
         angle = 18 + ((bmi - 25) / 5) * 36;
+        color = "var(--c4)";
+        angle = 18 + ((bmi - 25) / 5) * 36;
     } else {
         level = "Obese";
+        color = "var(--c5)";
+        angle = 54 + ((bmi - 30) / 10) * 36;
+        angle = Math.min(angle, 90);
         color = "var(--c5)";
         angle = 54 + ((bmi - 30) / 10) * 36;
         angle = Math.min(angle, 90);
