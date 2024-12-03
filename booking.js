@@ -27,7 +27,8 @@ $(document).ready(function () {
     }
 
     $('.book__btn').on('click', function () {
-        const loggedIn = localStorage.getItem('loggedIn') === 'true';
+        let loggedIn = sessionStorage.getItem('Logged_In') === 'true';
+        console.log(sessionStorage.getItem('Logged_In'));
         if (!loggedIn) {
             alert("You must log in to access this page.");
             return;
@@ -38,6 +39,7 @@ $(document).ready(function () {
         $('#timePicker').val('');
         $bookingMessage.hide(); 
         openModal();
+        
     });
 
     $confirmBookingBtn.on('click', function () {
