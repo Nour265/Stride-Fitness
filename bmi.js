@@ -53,11 +53,14 @@ document.getElementById('calculate-BMI').addEventListener('click', function() {
         angle = Math.min(angle, 90);
     }
 
-    bmiResult.textContent += ` (${level})`;
-    bmiResult.style.color = `var(--c${level === "Severely Underweight" ? 1 : level === "Underweight" ? 2 : level === "Normal Weight" ? 3 : level === "Overweight" ? 4 : 5})`;
-
+    bmiResult.textContent = `Your BMI is ${bmi.toFixed(2)}, which means you are ${level}.`;
+    bmiResult.style.color = color;
+    
     document.querySelector('.needle').style.transform = `translateY(-100%) rotate(${angle}deg)`;
     console.log(`Calculated angle: ${angle}`);
+
+    document.getElementById('weight').value = '';
+    document.getElementById('height').value = '';
 });
 
 
@@ -82,6 +85,11 @@ document.getElementById('calculateCalories').addEventListener('click', function(
     } else {
         document.getElementById('caloriesResult').textContent = "You are already at your target weight!";
     }
+
+    document.getElementById('currentWeight').value = '';
+    document.getElementById('targetWeight').value = '';
+    document.getElementById('daysToReach').value = '';
+
   });
 
   document.addEventListener("DOMContentLoaded", () => {
